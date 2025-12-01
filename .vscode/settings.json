@@ -1,0 +1,14 @@
+{
+  "python.defaultInterpreterPath": "C:\\Users\\chewt\\miniforge3\\envs\\student_perf\\python.exe",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.formatting.provider": "black",
+  "python.analysis.extraPaths": ["${workspaceFolder}/src"],
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  }
+}
