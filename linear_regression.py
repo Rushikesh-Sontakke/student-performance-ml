@@ -94,15 +94,16 @@ intercept = best_mdl.intercept_
 coefficients = best_mdl.coef_
 feature_names = X_train.columns.tolist()
 
-print("\nRegression Formula (first 5 terms):")
-print(f"y = {intercept:.6f}", end="")
-for i in range(min(5, len(coefficients))):
-    sign = "+" if coefficients[i] >= 0 else "-"
-    print(f" {sign} {abs(coefficients[i]):.6f}*{feature_names[i]}", end="")
-if len(coefficients) > 5:
-    print(f" + ... ({len(coefficients)-5} more terms)")
-else:
-    print()
+print("\nRegression Formula (sorted by importance - absolute coefficient value):")
+print(f"y = {intercept:.6f}")
+
+# Sort coefficients by absolute value (importance)
+coef_importance = [(abs(coefficients[i]), coefficients[i], feature_names[i]) for i in range(len(coefficients))]
+coef_importance.sort(reverse=True, key=lambda x: x[0])
+
+for abs_coef, coef, feature in coef_importance:
+    sign = "+" if coef >= 0 else "-"
+    print(f"    {sign} {abs_coef:.6f} * {feature}")
 
 report(y_train, yhat_tr, "Train")
 report(y_test,  yhat_te, "Test")
