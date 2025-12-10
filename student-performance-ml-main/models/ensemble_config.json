@@ -1,0 +1,30 @@
+{
+  "weights": {
+    "Linear Regression": 0.9031328047028342,
+    "Random Forest": 0.09142496723027232,
+    "XGBoost": 0.005442228066893539,
+    "Neural Network": 0.0
+  },
+  "feature_names": [
+    "Hours_Studied",
+    "Attendance",
+    "Parental_Involvement",
+    "Access_to_Resources",
+    "Sleep_Hours",
+    "Previous_Scores",
+    "Motivation_Level",
+    "Tutoring_Sessions",
+    "Family_Income",
+    "Teacher_Quality",
+    "Physical_Activity",
+    "Parental_Education_Level",
+    "Distance_from_Home",
+    "Gender_Male",
+    "School_Type_Public",
+    "Extracurricular_Activities_Yes",
+    "Internet_Access_Yes",
+    "Peer_Influence_Neutral",
+    "Peer_Influence_Positive",
+    "Learning_Disabilities_Yes"
+  ]
+}
